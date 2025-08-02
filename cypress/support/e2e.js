@@ -14,6 +14,5 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import('cypress-xpath')
 import './commands'
-import './pages/login.page'
-import './pages/hoome.page'

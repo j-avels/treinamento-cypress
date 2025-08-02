@@ -5,8 +5,8 @@ module.exports = defineConfig({
     viewportWidth:1920,
     viewportHeight:1080,
     watchForFileChanges: false,
-    specPattern: 'cypress/e2e/**/*.feature',
-    baseUrl: 'http://www.automationpractice.pl/',
+    specPattern: 'cypress/e2e/**/*.feature', //isso é o caminho para os arquivos de features
+    baseUrl: 'https://www.saucedemo.com/',
     
     
     

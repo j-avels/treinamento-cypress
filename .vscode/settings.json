@@ -1,0 +1,15 @@
+{
+    "cucumber.features": [
+    "cypress/**/*.feature",
+  ],
+    
+    "cucumber.glue": [ //isso é o caminho para os arquivos de step definitions
+        "cypress/e2e/step_definitions/**/*.js",
+        "cypress/e2e/step_definitions/**/*.jsx",
+        "cypress/e2e/step_definitions/**/*.php",
+        "cypress/e2e/step_definitions/**/*.py",
+        "cypress/e2e/step_definitions/**/*.ts",
+        "cypress/e2e/step_definitions/**/*.java",
+        "cypress/e2e/step_definitions/**/cypress/e2eure"],
+  
+}
