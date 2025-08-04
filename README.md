@@ -10,26 +10,34 @@
 ## ESTRUTURA
 project-root/
 │
+├── .vscode/
+│   ├── settings.json             #configurações personalizadas do VSC para esse projeto.
+│
 ├── cypress/
 │   ├── e2e/                       # Testes de ponta a ponta
 │   │   ├── features/              # Cenários em Gherkin
 │   │   │   ├── login.feature
 │   │   │   ├── cadastro.feature
 │   │   │   └── ...
+│   │   │
 │   │   ├── step_definitions/      # Implementação dos steps
 │   │   │   ├── login.steps.js
-│   │   │   ├── cadastro.steps.js
-│   │   │   └── hooks.js           # Hooks before/after dos testes
+│   │   │   └── cadastro.steps.js
+│   │   │   
 │   │   └── pages/                 # Page Objects
 │   │       ├── LoginPage.js
 │   │       ├── CadastroPage.js
 │   │       └── ...
+│   │
 │   ├── support/                   # Suporte do Cypress
 │   │   ├── commands.js            # Comandos customizados
 │   │   ├── e2e.js                 # Configurações globais
+│   │   │
 │   │   └── utils/                 # Funções auxiliares
 │   │       ├── api.js
-│   │       └── fakerData.js
+│   │       ├── fakerData.js
+│   │       └── hooks.js           # Hooks before/after dos testes
+│   │
 │   ├── fixtures/                  # Dados estáticos / massa de dados (JSON, CSV, etc.)
 │   │   ├── users.json
 │   │   └── products.json
@@ -40,5 +48,5 @@ project-root/
 │
 ├── .env                           # Variáveis de ambiente
 ├── cypress.config.js              # Configuração Cypress
-├── package.json
+├── package.json                   # Metados do projeto
 └── README.md

@@ -1,19 +1,26 @@
 const { defineConfig } = require("cypress");
+const createEsbuildPlugin = require("@bahmutov/cypress-esbuild-preprocessor");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
 
 module.exports = defineConfig({
   e2e: {
-    viewportWidth:1920,
-    viewportHeight:1080,
-    watchForFileChanges: false,
-    specPattern: 'cypress/e2e/**/*.feature', //isso é o caminho para os arquivos de features
-    baseUrl: 'https://www.saucedemo.com/',
-    
-    
-    
-    setupNodeEvents(on, config) {
-      const cucumber = require('cypress-cucumber-prepocessor').default;
-      on('file:preprocessor',cucumber())
-      // implement node event listeners here
+    viewportWidth: 1920, //define largura do largura
+    viewportHeight: 1080, //define altura da tela
+    watchForFileChanges: false, //desabilita recarregamento automático do cypress
+    specPattern: "**/*.feature", //define o padrão de arquivos de teste a serem executados
+    async setupNodeEvents(on, config) {
+      await addCucumberPreprocessorPlugin(on, config, {
+        stepDefinitions: "cypress/e2e/step_definitions", // define o caminho para os step definitions
+        nonGlobalStepDefinitions: false // define se or arq. de stepDefinitions deverão estar no mesmo diretório de features (true==local) ou nao (false==global)
+      });
+
+      on("file:preprocessor", createBundler({
+        plugins: [createEsbuildPlugin(config)]
+      }));
+
+      return config;
     },
+    baseUrl: 'https://www.saucedemo.com/', //define URL base do aplicativo a ser testado
   },
 });

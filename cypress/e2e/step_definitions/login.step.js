@@ -1,7 +1,7 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('the user is on the login page', () => {
-    cy.visit('/login');
+    cy.visit('/login'); // Ensure the user is on the login page
 });
 
 When('the user enters a valid username and password', () => {
