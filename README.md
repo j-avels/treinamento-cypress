@@ -11,7 +11,7 @@
 project-root/
 │
 ├── .vscode/
-│   ├── settings.json             #configurações personalizadas do VSC para esse projeto.
+│   └── settings.json             #configurações personalizadas do VSC para esse projeto.
 │
 ├── cypress/
 │   ├── e2e/                       # Testes de ponta a ponta
