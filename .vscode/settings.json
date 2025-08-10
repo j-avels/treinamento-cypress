@@ -1,0 +1,21 @@
+{//arquivo de configuração do vscode para este projeto
+
+  "cucumber.features": [ //isso é o caminho para os arquivos de feature
+    "cypress/e2e/**/*.feature",
+  ],
+     
+  "cucumber.glue": [ //isso é o caminho para os arquivos de step definitions
+      "cypress/e2e/step_definitions/**/*.js",
+      "cypress/e2e/step_definitions/**/*.jsx",
+      "cypress/e2e/step_definitions/**/*.php",
+      "cypress/e2e/step_definitions/**/*.py",
+      "cypress/e2e/step_definitions/**/*.ts",
+      "cypress/e2e/step_definitions/**/*.java",
+      "cypress/e2e/step_definitions/**/cypress/e2eure"
+    ],
+
+    "cucumber.parameterTypes": [
+      { "name": "actor", "regexp": "[A-Z][a-z]+" }
+    ],
+
+}
