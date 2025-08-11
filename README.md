@@ -19,28 +19,32 @@ project-root/
 │   │   │   ├── login.feature
 │   │   │   ├── cadastro.feature
 │   │   │   └── ...
-│   │   │
-│   │   ├── step_definitions/      # Implementação dos steps
-│   │   │   ├── login.steps.js
-│   │   │   └── cadastro.steps.js
 │   │   │   
-│   │   └── pages/                 # Page Objects
-│   │       ├── LoginPage.js
-│   │       ├── CadastroPage.js
-│   │       └── ...
-│   │
-│   ├── support/                   # Suporte do Cypress
-│   │   ├── commands.js            # Comandos customizados
-│   │   ├── e2e.js                 # Configurações globais
+│   │   ├── pages/                 # Page Objects
+│   │   │   ├── LoginPage.js
+│   │   │   ├── CadastroPage.js
+│   │   │   └── ...
 │   │   │
-│   │   └── utils/                 # Funções auxiliares
-│   │       ├── api.js
-│   │       ├── fakerData.js
-│   │       └── hooks.js           # Hooks before/after dos testes
+│   │   └── step_definitions/      # Implementação dos steps
+│   │       ├── login.steps.js
+│   │       └── cadastro.steps.js
+│   │
 │   │
 │   ├── fixtures/                  # Dados estáticos / massa de dados (JSON, CSV, etc.)
 │   │   ├── users.json
 │   │   └── products.json
+│   │
+│   │
+│   ├── support/                   # Suporte do Cypress
+│   │   ├── commands.js            # Comandos customizados
+│   │   └── e2e.js                 # Configurações globais
+│   │
+│   │ 
+│   ├── utils/                     # Funções auxiliares   
+│   │   ├── api.js
+│   │   ├── fakerData.js
+│   │   └── hooks.js               # Hooks before/after dos testes
+│   │
 │   │
 │   └── reports/                   # Relatórios de execução
 │       ├── cucumber-html-report/
