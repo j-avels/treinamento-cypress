@@ -24,7 +24,12 @@ module.exports = defineConfig({ //exporta a configuração do cypress
     viewportWidth: 1920, //define largura da tela na execução dos testes
     viewportHeight: 1080, //define altura da tela na execução dos testes
     setupNodeEvents, //configura eventos do Node.js
-    baseUrl: "https://www.saucedemo.com/"//http://www.automationpractice.pl/index.php "https://www.saucedemo.com/", //define URL base do aplicativo a ser testado
+    baseUrl: "https://www.saucedemo.com/",//http://www.automationpractice.pl/index.php "https://www.saucedemo.com/", //define URL base do aplicativo a ser testado
+    paths:{
+      "@fixtures/*":["fixtures/*"], //O '/*' significa que tudo dentro da pasta fixtures pode ser acessado pelo alias.
+      "@pages/*":["e2e/pages/*"],
+      "@elements/*":["e2e/pages/elements/*"],
+    }
   }
 });
 

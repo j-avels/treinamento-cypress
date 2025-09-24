@@ -4,7 +4,8 @@
   "description": "ptBr: Projeto base de Cypress com Cucumber para automação de testes / En: Base Cypress project with Cucumber for test automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:op": "cypress open --config baseUrl=https://www.saucedemo.com"
   },
   "keywords": [
     "automação",
@@ -20,6 +21,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
     "cypress": "^14.5.4",
+    "cypress-xpath": "^2.0.1",
     "esbuild": "^0.25.8"
   },
   "cypress-cucumber-preprocessor": {
