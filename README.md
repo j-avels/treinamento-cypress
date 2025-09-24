@@ -8,6 +8,7 @@
 
 
 ## ESTRUTURA
+```
 project-root/
 │
 ├── .vscode/
@@ -23,7 +24,8 @@ project-root/
 │   │   ├── pages/                 # Page Objects
 │   │   │   ├── LoginPage.js
 │   │   │   ├── CadastroPage.js
-│   │   │   └── ...
+│   │   │   └── elements/
+│   │   │       ├── login.elements.js
 │   │   │
 │   │   └── step_definitions/      # Implementação dos steps
 │   │       ├── login.steps.js
@@ -54,3 +56,4 @@ project-root/
 ├── cypress.config.js              # Configuração Cypress
 ├── package.json                   # Metados do projeto
 └── README.md
+```
