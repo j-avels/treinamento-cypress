@@ -25,7 +25,7 @@ project-root/
 │   │   │   ├── LoginPage.js
 │   │   │   ├── CadastroPage.js
 │   │   │   └── elements/
-│   │   │       ├── login.elements.js
+│   │   │       └── login.elements.js
 │   │   │
 │   │   └── step_definitions/      # Implementação dos steps
 │   │       ├── login.steps.js
